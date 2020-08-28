@@ -1,0 +1,7 @@
+source('main.R')
+mydownload()
+mypowerdata <- myread()
+print('Plotting Plot2...')
+png(file='plot2.png',width=480,height=480,bg="transparent")
+plot(mypowerdata$DateTime, mypowerdata$Global_active_power, type="l", xlab="", ylab = "Global Active Power (kilowatts)")
+dev.off()
